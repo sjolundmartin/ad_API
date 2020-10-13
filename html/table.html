@@ -1,0 +1,56 @@
+<h3>Add ad</h3>
+<form>
+  <label for="first">Subscriber</label>
+  <input id="first" type="radio" name="content" ng-model="content" value="first">
+  <br />
+  <label for="other">Company</label>
+  <input id="other" type="radio" name="content" ng-model="content" value="other">
+</form>
+
+<div class="wrapper">
+  <div ng-show="content == 'first'">
+    <label>Subscriber ID</label>
+    <input type="text" ng-model="subID" />
+    <input type="submit" value="Fortsätt" ng-click="subRedirect(subID)" />
+  </div>
+  <div ng-show="content == 'other'">
+    <label>Organisation ID</label>
+    <input type="text" ng-model="orgID" />
+    <input type="submit" value="Fortsätt" ng-click="orgRedirect(orgID)" />
+
+  </div>
+</div>
+</div>
+
+<br />
+<div>
+  <h2>Subscriber Ads</h2>
+  <table >
+    <tr>
+      <th>Product price</th>
+      <th>Content</th>
+      <th>Title</th>
+    </tr>
+    <tr ng-repeat="ad in subAds track by $index">
+      <td>{{ad.Ad_ProductPrice}}</td>
+      <td>{{ad.Ad_Content}}</td>
+      <td>{{ad.Ad_Title}}</td>
+    </tr>
+  </table><br>
+</div>
+
+<br />
+<div>
+  <h2>Company Ads</h2>
+  <table >
+    <tr>
+      <th>Product price</th>
+      <th>Content</th>
+      <th>Title</th>
+    </tr>
+    <tr ng-repeat="ad in companyAds track by $index">
+      <td>{{ad.Ad_ProductPrice}}</td>
+      <td>{{ad.Ad_Content}}</td>
+      <td>{{ad.Ad_Title}}</td>
+    </tr>
+  </table><br>

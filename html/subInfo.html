@@ -1,0 +1,15 @@
+<div>
+  <h5>Name: {{sub.name}}</h5>
+  <h5>Phone number: {{sub.phone}}</h5>
+  <h5>Zip code: {{sub.zip}}</h5>
+  <h5>Address: {{sub.address}}</h5>
+  <h5>City: {{sub.city}}</h5>
+</div><br />
+
+<p>
+  Is this info correct?
+</p>
+<input type="submit" value="Yes" ng-click="adRedirect()" />
+<input type="submit" value="No, change" ng-click="toUpdate()" /><br /><br />
+
+<a href="#!">Go back</a>
